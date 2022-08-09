@@ -5,9 +5,12 @@
 782 -> 8
 918 -> 1
 */
+Console.WriteLine("Введите трёхзначное число");
+int number = Convert.ToInt32(Console.ReadLine());
 
-int number = new Random().Next(100,1000);
-Console.WriteLine(number);
-
+if (number < 1000 && number > 99)
+{
 int result = ( (number / 10) % 10);
-Console.WriteLine(result);
+ Console.WriteLine(result + " вторая цифра числа " + number );
+}
+else Console.WriteLine("Вы ввели не трёхзначное число, попробуйте заново");
